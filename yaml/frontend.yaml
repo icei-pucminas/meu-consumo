@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-frontend
+spec:
+  selector:
+    name: deployment-frontend
+  ports:
+    - port: 3000
+    targetPort: 80
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: deployment-frontend
+  template:
+    metadata:
+      labels:
+        name: deployment-frontend
+    spec:
+      containers:
+        - name: frontend
+          image: brenoproti/meu-consumo-frontend:0.0.3
+          ports:
+            - containerPort: 80

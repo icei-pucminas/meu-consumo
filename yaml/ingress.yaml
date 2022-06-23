@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: nginx
+  annotations:
+    kubernets.io/ingress.class: "nginx"
+spec:
+  rules:
+  - http:
+      paths:
+      - pathType: Prefix
+        path: "/api"
+        backend:
+          service:
+            name: service-backend
+            port:
+              number: 8080
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: service-frontend
+            port:
+              number: 3000

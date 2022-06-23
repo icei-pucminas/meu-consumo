@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-backend
+spec:
+  selector:
+    name: deployment-backend
+  ports:
+    - port: 8080
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: deployment-backend
+  template:
+    metadata:
+      labels:
+        name: deployment-backend
+    spec:
+      containers:
+        - name: backend
+          image: brenoproti/meu-consumo-backend:0.0.2
+          ports:
+            - containerPort: 8080
+          env: 
+            - name: SPRING_DATASOURCE_URL
+              value: jdbc:postgresql://service-postgres:5432/meuconsumo?currentSchema=public
