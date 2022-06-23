@@ -87,7 +87,7 @@ Como alternativa, você pode utilizar o Kubernetes
 
 ### Kubernetes
 
-No diretório Kubernetes/yaml para cada arquivo, executar 
+No diretório ./yaml para cada arquivo, executar 
 
 ```bash
 kubectl apply -f nome-arquivo.yaml
