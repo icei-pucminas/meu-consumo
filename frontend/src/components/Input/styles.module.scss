@@ -1,0 +1,48 @@
+.wrapper {
+  margin-bottom: 1rem;
+
+  .inputWrapper {
+    border: 1px solid #ddd;
+    background: #fff;
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    width: 100%;
+
+    .inputIcon {
+      font-size: 1.125rem;
+      padding: 0 8px 0 12px;
+    }
+
+    .inputField {
+      display: block;
+      width: 100%;
+      font-size: 1rem;
+      padding: 0.75rem;
+      transition: 0.2s;
+      border-radius: 0 16px 16px 0;
+      border: none;
+
+      &::placeholder {
+        color: #86a1a4;
+        border: none;
+      }
+
+      &:hover,
+      &:focus {
+        outline: none;
+        background: #d7edee;
+        box-shadow: 0 0 0 2px #86a1a4;
+      }
+    }
+  }
+}
+
+.error {
+  color: rgb(216, 69, 43);
+  margin-left: 10px;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}

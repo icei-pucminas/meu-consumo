@@ -1,0 +1,17 @@
+.cardsContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  gap: 20px;
+}
+
+.tips {
+  box-sizing: border-box;
+  width: 339px;
+  height: 156px;
+  left: 18px;
+  top: 622px;
+  background: #DDF3FC;
+  border: 1px solid #26AADD;
+  border-radius: 25px;
+}

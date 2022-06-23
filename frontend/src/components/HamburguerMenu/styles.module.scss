@@ -1,0 +1,159 @@
+.menuBtn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  // background: #fff;
+  /* border: 3px solid #fff; */
+
+  .menuBtnBurguer {
+    width: 40px;
+    height: 2px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+    transition: all 0.5s ease-in-out;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 50px;
+      height: 2px;
+      background: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+      transition: all 0.5s ease-in-out;
+    }
+    &::before {
+      transform: translateY(-14px);
+    }
+    &::after {
+      transform: translateY(14px);
+    }
+
+    &::after {
+      width: 30px;
+    }
+  }
+}
+
+.content {
+  position: absolute;
+  left: 0;
+  top: 0;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #096285da;
+  height: 100vh;
+  width: 60vw;
+  z-index: 99;
+  padding: 20px;
+  transition: all 0.5s ease-in-out;
+  animation: slideIn 0.5s ease-in-out;
+
+  .userInfo {
+    h3 {
+      font-size: 1.5rem;
+      text-align: start;
+
+      &::after {
+        content: "";
+        display: block;
+        width: 65%;
+        height: 2px;
+        background: #fff;
+        margin: 4px 0 4px 0;
+      }
+    }
+
+    .loginInfo {
+      a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+    }
+
+    .userInfoContent {
+      margin-top: 1rem;
+      p {
+        font-size: 0.875rem;
+        text-align: start;
+      }
+
+      span {
+        display: block;
+        font-size: 0.75rem;
+        text-align: start;
+      }
+    }
+  }
+
+  .closeBtn {
+    cursor: pointer;
+    text-align: end;
+    font-size: 2rem;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 50px 0 0 0;
+    width: 100%;
+
+    li {
+      margin-bottom: 1rem;
+      a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 1rem;
+        font-weight: bold;
+        transition: all 0.5s ease-in-out;
+
+        i {
+          margin-right: 1rem;
+        }
+
+        &:hover {
+          color: #ccc;
+          background: #096285da;
+        }
+      }
+    }
+  }
+
+
+  .footer {
+    text-align: center;
+    font-size: .875rem;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    width: 0vw;
+    display: none;
+  }
+  to {
+    opacity: 100%;
+    display: block;
+    width: 60vw;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menuBtnBurguer {
+    height: 4px !important;
+    &::before,
+    &::after {
+      height: 4px !important;
+    }
+  }
+}

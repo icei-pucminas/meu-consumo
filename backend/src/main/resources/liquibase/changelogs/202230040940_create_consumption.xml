@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+    <changeSet author="hugo" id="202230040940-04" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="tb_consumption">
+            <column name="id" type="bigint" remarks="Consumption identifier">
+                <constraints primaryKey="true" primaryKeyName="pk_consumption" nullable="false" />
+            </column>
+            <column name="calculation_factor" type="decimal(10,2)" remarks="Consumption calculation factor">
+                <constraints nullable="false" />
+            </column>
+            <column name="category" type="varchar(30)" remarks="Consumption category">
+                <constraints nullable="false" />
+            </column>
+            <column name="date" type="date" remarks="Consumption date">
+                <constraints nullable="false" />
+            </column>
+            <column name="quantity" type="decimal(10,2)" remarks="Consumption value">
+                <constraints nullable="false" />
+            </column>
+            <column name="time" type="bigint" remarks="Consumption time (in seconds)">
+                <constraints nullable="false" />
+            </column>
+            <column name="type" type="varchar(30)" remarks="Consumption type">
+                <constraints nullable="false" />
+            </column>
+            <column name="value" type="decimal(10,2)" remarks="Consumption value">
+                <constraints nullable="false" />
+            </column>
+            <column name="user_id" type="bigint" remarks="User identifier">
+                <constraints references="tb_user(id)" foreignKeyName="fk_user" nullable="false" />
+            </column>
+        </createTable>
+
+        <createSequence sequenceName="seq_consumption" startValue="1" />
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,35 @@
+:root {
+  font-family: "Nunito", sans-serif;
+  --main-bg: #F1F5FF;
+  --text-color: #152629;
+  --text-color-lg: rgb(131, 142, 176);
+  --card-button: #FFF;
+  --green: #21a02e;
+}
+
+.dark {
+  --main-bg: #152629;
+  --text-color: #F1F5FF;
+  --theme-page-background: #111;
+  --theme-page-text: #FFF;
+  --card-button: #294B51;
+  --text-color-lg: #cfd7ea;
+  --green: #90f69b;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}

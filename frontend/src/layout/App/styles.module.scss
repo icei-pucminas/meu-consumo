@@ -1,0 +1,62 @@
+.appLayout {
+  color: var(--text-color) !important;
+
+  height: 100vh;
+  width: 100%;
+  position: relative;
+
+  header {
+    height: 30vh;
+    padding: 20px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+    .pageHeader {
+      .headerTitle {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .icon {
+          color: #fff;
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+          font-size: 1.5rem;
+          transition: all 270ms;
+
+          &:hover {
+            transform: translateX(-7px);
+          }
+        }
+      }
+
+      h1 {
+        font-family: "Nunito", sans-serif;
+      }
+    }
+  }
+
+  main {
+    position: absolute;
+    overflow-y: auto;
+    bottom: 0;
+    left: 0;
+    background: var(--main-bg);
+    height: 70vh;
+    width: 100%;
+    padding: 20px;
+    border-radius: 36px 36px 0 0;
+
+    .imageLayout {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      margin: 10px 0 25px 0;
+      border-radius: 36px 36px 0 0;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+    <changeSet author="hugo" id="202230040852-02" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="tb_tip">
+            <column name="id" type="bigint" remarks="Tip identifier">
+                <constraints primaryKey="true" primaryKeyName="pk_tip" nullable="false" />
+            </column>
+            <column name="title" type="varchar(50)" remarks="Tip title">
+                <constraints nullable="false" />
+            </column>
+            <column name="message" type="varchar(255)" remarks="Tip message">
+                <constraints nullable="false" />
+            </column>
+            <column name="category" type="char(20)" remarks="Tip category">
+                <constraints nullable="false" />
+            </column>
+        </createTable>
+
+        <createSequence sequenceName="seq_tip" startValue="1" />
+    </changeSet>
+</databaseChangeLog>

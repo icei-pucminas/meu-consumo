@@ -1,0 +1,38 @@
+$linkColor: #17A1AF;
+
+.main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    img {
+        margin-top: 2rem;
+    }
+
+    .text {
+        margin-top: 1.5rem;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 29px;
+        color: #8F8F8F;
+
+        .linkWrapper {
+            display: block;
+            margin-top: 2.5rem;
+            .link {
+                cursor: pointer;
+                color: $linkColor;
+                text-decoration: none;
+                font-weight: bold;
+            }
+        }
+
+       
+    }
+}
+
